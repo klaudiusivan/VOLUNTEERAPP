@@ -63,6 +63,30 @@
 			path = Organization;
 			sourceTree = "<group>";
 		};
+		89E5EE66213D6DE10030D15D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89E5EE63213D6D000030D15D /* Initial */,
+				89E5EE64213D6D130030D15D /* User */,
+				89E5EE65213D6D1A0030D15D /* Organization */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89E5EE67213D6DFE0030D15D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		89E5EE68213D6E130030D15D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F806C066213D682400CD3E9F = {
 			isa = PBXGroup;
 			children = (
@@ -82,9 +106,9 @@
 		F806C071213D682400CD3E9F /* VOLUNTEERAPP */ = {
 			isa = PBXGroup;
 			children = (
-				89E5EE65213D6D1A0030D15D /* Organization */,
-				89E5EE64213D6D130030D15D /* User */,
-				89E5EE63213D6D000030D15D /* Initial */,
+				89E5EE68213D6E130030D15D /* Model */,
+				89E5EE67213D6DFE0030D15D /* Controller */,
+				89E5EE66213D6DE10030D15D /* View */,
 				F806C072213D682400CD3E9F /* AppDelegate.swift */,
 				F806C07C213D682800CD3E9F /* Assets.xcassets */,
 				F806C07E213D682800CD3E9F /* LaunchScreen.storyboard */,
