@@ -76,6 +76,7 @@
 		89E5EE67213D6DFE0030D15D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F806C08C213D6EA300CD3E9F /* Organization */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -83,6 +84,7 @@
 		89E5EE68213D6E130030D15D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F806C08D213D6EB000CD3E9F /* Organization */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -116,6 +118,20 @@
 				F806C079213D682400CD3E9F /* VOLUNTEERAPP.xcdatamodeld */,
 			);
 			path = VOLUNTEERAPP;
+			sourceTree = "<group>";
+		};
+		F806C08C213D6EA300CD3E9F /* Organization */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Organization;
+			sourceTree = "<group>";
+		};
+		F806C08D213D6EB000CD3E9F /* Organization */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Organization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
