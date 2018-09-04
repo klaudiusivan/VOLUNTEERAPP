@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Opportunities View Controller-->
+        <!--Available Opportunities-->
         <scene sceneID="hzH-06-8Y3">
             <objects>
-                <viewController id="C0J-y5-R4U" customClass="OpportunitiesViewController" customModule="VOLUNTEERAPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Available Opportunities" id="C0J-y5-R4U" customClass="OpportunitiesViewController" customModule="VOLUNTEERAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kfl-jn-gBr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,21 +37,21 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gempa Lombok" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaK-Oi-ogw">
                                                     <rect key="frame" x="39" y="19" width="296" height="54"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <color key="textColor" red="0.99442642869999998" green="1" blue="0.99832965360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="16 Agustus - 16 September" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNb-84-Cie">
                                                     <rect key="frame" x="39" y="56" width="296" height="54"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.99442642869999998" green="1" blue="0.99832965360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5 Volunteer Needed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgv-wq-JjK">
                                                     <rect key="frame" x="39" y="297" width="296" height="54"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="0.99442642869999998" green="1" blue="0.99832965360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -74,7 +74,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="EUT-TN-i59"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4bF-tX-FBV"/>
+                    <navigationItem key="navigationItem" title="Available Opportunities" id="4bF-tX-FBV"/>
                     <connections>
                         <outlet property="opportunitiesTable" destination="9lL-ZN-cUP" id="DvU-kC-0Fb"/>
                         <segue destination="zjX-Qr-PcJ" kind="show" identifier="DetailOpportunities" id="WyG-7m-Mks"/>
