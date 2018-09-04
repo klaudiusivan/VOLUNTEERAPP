@@ -48,6 +48,8 @@ class PendingUserViewController: UIViewController, UITableViewDelegate, UITableV
             
             destination.imageGambarDetail = gambarPendingUser
             destination.labelNamaDetail = namaPendingUser
+            destination.labelSkillDetail = skillPendingUser
+            
             
             destination.index = clickedIndex
             

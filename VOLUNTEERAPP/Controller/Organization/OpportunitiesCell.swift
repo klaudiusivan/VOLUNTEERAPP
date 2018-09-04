@@ -9,11 +9,17 @@
 import UIKit
 
 class OpportunitiesCell: UITableViewCell{
-    @IBOutlet weak var namaOpportunities: UILabel!
-    @IBOutlet weak var tanggalOpportunities: UILabel!
-    @IBOutlet weak var tempatOpportunities: UILabel!
-    @IBOutlet weak var statusQuotaOpportunities: UILabel!
-    @IBOutlet weak var quotaVolunteerOpportunities: UILabel!
+
+    @IBOutlet weak var gambarOpportunitiesImage: UIImageView!
+    
+    @IBOutlet weak var namaOpportunitiesLabel: UILabel!
+    
+    @IBOutlet weak var tanggalOpportunitiesLabel: UILabel!
+    
+    @IBOutlet weak var tempatOpportunitiesLabel: UILabel!
+    
+    @IBOutlet weak var statusOpportunitiesLabel: UILabel!
+    
     
     func setOpportunitiesCell() {
         

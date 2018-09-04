@@ -21,6 +21,9 @@ class DetailPendingUserViewController: UIViewController {
     
     @IBOutlet weak var emailDetailUserPending: UILabel!
     
+    @IBOutlet weak var skillDetailUserPending: UILabel!
+    
+    
     
     var index : Int = 0
     
@@ -32,6 +35,7 @@ class DetailPendingUserViewController: UIViewController {
     
     var labelEmailDetail : [String] = []
     
+    var labelSkillDetail : [String] = []
     
     
     
@@ -41,6 +45,7 @@ class DetailPendingUserViewController: UIViewController {
 
         gambarDetailUserPending.image = imageGambarDetail[index]
         namaDetailUserPending.text = labelNamaDetail[index]
+        skillDetailUserPending.text = labelSkillDetail[index]
         
         // Do any additional setup after loading the view.
     }
