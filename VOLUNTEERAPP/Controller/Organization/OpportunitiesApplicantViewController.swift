@@ -11,6 +11,7 @@ import UIKit
 class OpportunitiesApplicantViewController: UIViewController {
     //MARK - Outlets
     
+    @IBOutlet weak var OpportunitiesApplicantTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +40,11 @@ class OpportunitiesApplicantViewController: UIViewController {
 
 extension OpportunitiesApplicantViewController: UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
+        return 
     }
     
 }
