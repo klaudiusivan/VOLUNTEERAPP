@@ -36,8 +36,8 @@ class OpportunitiesViewController: UIViewController,UITableViewDelegate,UITableV
 //    var neededEventOpportunities : [String] = ["5 Volunteer Needed","8 Volunter Needed"]
 //
     var gambarEventOpportunities : [UIImage] = [
-        UIImage(named: "GempaLombok")!,
-        UIImage(named: "GempaJogja")!
+        UIImage(named: "gempa1")!,
+        UIImage(named: "gempa2")!
     ]
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
