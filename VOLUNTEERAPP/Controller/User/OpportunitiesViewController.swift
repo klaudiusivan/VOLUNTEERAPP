@@ -51,7 +51,7 @@ class OpportunitiesViewController: UIViewController,UITableViewDelegate,UITableV
 
             
             destination.imageGambarDetail = gambarEventOpportunities
-            destination.labelTanggalDetail = tanggalEventOpportunities
+            destination.opportunities = opportunities
             destination.index = clickedIndex
             
     
