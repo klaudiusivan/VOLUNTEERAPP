@@ -154,19 +154,8 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="namaOpportunities" destination="Rcs-zm-ZJS" id="Mtt-3o-t40"/>
-                                            <outlet property="quotaVolunteerOpportunities" destination="h4y-NI-En8" id="aXX-XI-YU0"/>
-                                            <outlet property="statusQuotaOpportunities" destination="wi6-vD-LNg" id="5NX-yb-U8Z"/>
-                                            <outlet property="tanggalOpportunities" destination="FAs-0Y-CxP" id="i8o-pa-bOk"/>
-                                            <outlet property="tempatOpportunities" destination="vx0-jI-xLR" id="eBb-oE-mrg"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="qY3-HA-nh8" id="4a5-Rx-suq"/>
-                                    <outlet property="delegate" destination="qY3-HA-nh8" id="oLe-9d-Dwh"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -174,12 +163,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Opportunities Applicant" id="iAC-bT-D29"/>
                     <connections>
-                        <outlet property="OpportunitiesApplicantTableView" destination="0AV-gK-5cM" id="xKh-Nt-Nxc"/>
-                        <outlet property="namaOpportunities" destination="Rcs-zm-ZJS" id="Gs4-dU-uBN"/>
-                        <outlet property="quotaVolunteerOpportunities" destination="h4y-NI-En8" id="aa7-a7-2bg"/>
-                        <outlet property="statusQuotaOpportunities" destination="wi6-vD-LNg" id="8hP-De-KIZ"/>
-                        <outlet property="tanggalOpportunities" destination="FAs-0Y-CxP" id="XXh-Bi-3XK"/>
-                        <outlet property="tempatOpportunities" destination="vx0-jI-xLR" id="fr3-zW-oYj"/>
                         <segue destination="zRt-OX-s3a" kind="showDetail" id="Aui-Se-sPp"/>
                     </connections>
                 </viewController>
