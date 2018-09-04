@@ -49,11 +49,15 @@ class DetailOpportunitiesViewController: UIViewController,UICollectionViewDataSo
         UIImage(named: "IconDapur")!
     ]
     var totalDetail:[String] = []
-    
+    var navigationBarAppearace = UINavigationBar.appearance()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        detailCollection.layer.backgroundColor
+        // Navigation bar
+        navigationBarAppearace.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        navigationBarAppearace.barTintColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+        
+        // detailCollection.layer.backgroundColor
         var totalVol = opportunities[index].dapur + opportunities[index].medis + opportunities[index].sar
         gambarDetail.image = imageGambarDetail[index]
         titleEvent.text = opportunities[index].namaOpportunity

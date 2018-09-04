@@ -60,8 +60,15 @@ class OpportunitiesViewController: UIViewController,UITableViewDelegate,UITableV
     
     
     @IBOutlet weak var opportunitiesTable: UITableView!
+    var navigationBarAppearace = UINavigationBar.appearance()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Navigation bar
+        navigationBarAppearace.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        navigationBarAppearace.barTintColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+        // change navigation item title color
+        
         ref = Database.database().reference()
             self.loadDataFromFirebase()
         
