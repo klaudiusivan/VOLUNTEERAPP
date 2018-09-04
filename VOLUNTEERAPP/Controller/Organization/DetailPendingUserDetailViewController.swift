@@ -10,9 +10,43 @@ import UIKit
 
 class DetailPendingUserViewController: UIViewController {
 
+    
+    @IBOutlet weak var gambarDetailUserPending: UIImageView!
+    
+    @IBOutlet weak var namaDetailUserPending: UILabel!
+    
+    @IBOutlet weak var UmurDetailUserPending: UILabel!
+    
+    @IBOutlet weak var genderDetailUserPending: UILabel!
+    
+    @IBOutlet weak var emailDetailUserPending: UILabel!
+    
+    @IBOutlet weak var skillDetailUserPending: UILabel!
+    
+    
+    
+    var index : Int = 0
+    
+    var imageGambarDetail : [UIImage] = []
+    
+    var labelNamaDetail : [String] = []
+    
+    var labelGenderDetail : [String] = []
+    
+    var labelEmailDetail : [String] = []
+    
+    var labelSkillDetail : [String] = []
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        gambarDetailUserPending.image = imageGambarDetail[index]
+        namaDetailUserPending.text = labelNamaDetail[index]
+        skillDetailUserPending.text = labelSkillDetail[index]
+        
         // Do any additional setup after loading the view.
     }
 

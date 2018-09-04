@@ -11,8 +11,11 @@ import UIKit
 class DetailOpportunitiesApplicantViewController: UIViewController {
 
     var index : Int = 0
-    var imageGambarDetail: [UIImage] = []
-    var labelTanggalDetail: [String] = []
+
+
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

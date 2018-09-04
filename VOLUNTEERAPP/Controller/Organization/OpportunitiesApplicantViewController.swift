@@ -8,8 +8,57 @@
 
 import UIKit
 
-class OpportunitiesApplicantViewController: UIViewController {
+class OpportunitiesApplicantViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return namaOpportunities.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = jenisOpportunitiesTable.dequeueReusableCell(withIdentifier: "JenisOpportunities", for: indexPath) as? OpportunitiesCell
+        
+        cell?.gambarOpportunitiesImage.image = gambarOpportunities[indexPath.row]
+        cell?.namaOpportunitiesLabel.text = namaOpportunities[indexPath.row]
+        cell?.tanggalOpportunitiesLabel.text = tanggalOpportunities[indexPath.row]
+        cell?.tempatOpportunitiesLabel.text = tempatOpportunities[indexPath.row]
+        cell?.statusOpportunitiesLabel.text = statusOpportunities[indexPath.row]
+        
+        return cell!
+    }
+    
     //MARK - Outlets
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        clickedIndex = indexPath.row
+        performSegue(withIdentifier: "DetailHopeApplicant", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailOpportunitiesViewController{
+            
+            
+            
+           
+//            destination.labelTanggalDetail = tanggalEventOpportunities
+            destination.index = clickedIndex
+        }
+    }
+    
+    
+    @IBOutlet weak var jenisOpportunitiesTable: UITableView!
+    
+    var clickedIndex : Int = 0
+   
+    var namaOpportunities : [String] = ["Gempa Lombok","Gempa Yogya"]
+    
+    var tanggalOpportunities : [String] = ["16 Agustus - 16 September","1 Agustus - 20 Agustus"]
+    
+    var tempatOpportunities : [String] = ["Lombok","Yogya"]
+    
+    var statusOpportunities : [String] = ["15 of 20 Volunteer Needed","8 of 12 Volunteeer Needed"]
+    
+    var gambarOpportunities : [UIImage] = [UIImage(named: "GempaLombok")!,UIImage(named: "GempaJogja")!]
+    
+    
     
     
     override func viewDidLoad() {
@@ -36,3 +85,16 @@ class OpportunitiesApplicantViewController: UIViewController {
     */
 
 }
+
+//extension OpportunitiesApplicantViewController: UITableViewDataSource,UITableViewDelegate{
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 0
+//    }
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//
+//    }
+//
+//}
+
+

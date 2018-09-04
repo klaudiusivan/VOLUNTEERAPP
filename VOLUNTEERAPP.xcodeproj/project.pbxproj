@@ -10,6 +10,7 @@
 		7C67C6FB213E1ABD005AEB1D /* OpportunitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C67C6FA213E1ABD005AEB1D /* OpportunitiesViewController.swift */; };
 		7C67C6FD213E1AD2005AEB1D /* DetailOpportunitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C67C6FC213E1AD2005AEB1D /* DetailOpportunitiesViewController.swift */; };
 		7C67C6FF213E1AED005AEB1D /* OpportunitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C67C6FE213E1AED005AEB1D /* OpportunitiesTableViewCell.swift */; };
+		7CAEA32E213E49B000B5DB2D /* PendingUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAEA32D213E49B000B5DB2D /* PendingUserTableViewCell.swift */; };
 		89E5EE6A213D6ED00030D15D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89E5EE69213D6ECF0030D15D /* GoogleService-Info.plist */; };
 		89E5EE6F213D771A0030D15D /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E5EE6E213D771A0030D15D /* InitialViewController.swift */; };
 		89E5EE71213E24BB0030D15D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E5EE70213E24BB0030D15D /* SignUpViewController.swift */; };
@@ -36,6 +37,7 @@
 		7C67C6FA213E1ABD005AEB1D /* OpportunitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunitiesViewController.swift; sourceTree = "<group>"; };
 		7C67C6FC213E1AD2005AEB1D /* DetailOpportunitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOpportunitiesViewController.swift; sourceTree = "<group>"; };
 		7C67C6FE213E1AED005AEB1D /* OpportunitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunitiesTableViewCell.swift; sourceTree = "<group>"; };
+		7CAEA32D213E49B000B5DB2D /* PendingUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingUserTableViewCell.swift; sourceTree = "<group>"; };
 		89E5EE69213D6ECF0030D15D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		89E5EE6E213D771A0030D15D /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		89E5EE70213E24BB0030D15D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				F8DAF419213E2C9C005BE1C3 /* DetailPendingUserDetailViewController.swift */,
 				F8DAF417213E2C9C005BE1C3 /* OpportunitiesApplicantViewController.swift */,
 				F8DAF416213E2C9C005BE1C3 /* PendingUserViewController.swift */,
+				7CAEA32D213E49B000B5DB2D /* PendingUserTableViewCell.swift */,
 				F8A75448213E460F00964462 /* AddOpportunitiesViewController.swift */,
 			);
 			path = Organization;
@@ -325,6 +328,7 @@
 				89E5EE71213E24BB0030D15D /* SignUpViewController.swift in Sources */,
 				89E5EE6F213D771A0030D15D /* InitialViewController.swift in Sources */,
 				F8DAF41D213E2C9C005BE1C3 /* DetailPendingUserDetailViewController.swift in Sources */,
+				7CAEA32E213E49B000B5DB2D /* PendingUserTableViewCell.swift in Sources */,
 				7C67C6FF213E1AED005AEB1D /* OpportunitiesTableViewCell.swift in Sources */,
 				F806C07B213D682400CD3E9F /* VOLUNTEERAPP.xcdatamodeld in Sources */,
 				F8DAF41B213E2C9C005BE1C3 /* OpportunitiesApplicantViewController.swift in Sources */,
@@ -477,7 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9TDAR667HU;
+				DEVELOPMENT_TEAM = 38FBS5765W;
 				INFOPLIST_FILE = VOLUNTEERAPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -496,7 +500,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9TDAR667HU;
+				DEVELOPMENT_TEAM = 38FBS5765W;
 				INFOPLIST_FILE = VOLUNTEERAPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
