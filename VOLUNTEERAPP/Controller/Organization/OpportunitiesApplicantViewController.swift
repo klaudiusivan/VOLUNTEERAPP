@@ -33,10 +33,13 @@ class OpportunitiesApplicantViewController: UIViewController,UITableViewDataSour
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? DetailOpportunitiesViewController{
+        if let destination = segue.destination as? DetailOpportunitiesApplicantViewController{
             
             
-            
+            destination.namaOpportunities = namaOpportunities
+            destination.waktuOpportunities = tanggalOpportunities
+            destination.lokasiOpportunities = tempatOpportunities
+            destination.index = clickedIndex
            
 //            destination.labelTanggalDetail = tanggalEventOpportunities
             destination.index = clickedIndex
