@@ -122,7 +122,10 @@ class SignUpViewController: UIViewController {
                     if error == nil {
                         let userData = [
                             "verified": 0,
-                            "skills": self.skills
+                            "skills": self.skills,
+                            "name": name,
+                            "email": email,
+                            "UID": Auth.auth().currentUser?.uid as! String
                             ] as [String : Any]
                         self.ref.child("users").child((Auth.auth().currentUser?.uid)!).updateChildValues(userData) {
                             (error:Error?, ref:DatabaseReference) in

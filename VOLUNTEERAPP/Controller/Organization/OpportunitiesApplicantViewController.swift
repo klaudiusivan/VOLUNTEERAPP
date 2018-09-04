@@ -7,20 +7,26 @@
 //
 
 import UIKit
+import Firebase
 
 class OpportunitiesApplicantViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+    var ref:DatabaseReference!
+    var opportunities:[Opportunity] = []
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return namaOpportunities.count
+        return opportunities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = jenisOpportunitiesTable.dequeueReusableCell(withIdentifier: "JenisOpportunities", for: indexPath) as? OpportunitiesCell
         
-        cell?.gambarOpportunitiesImage.image = gambarOpportunities[indexPath.row]
-        cell?.namaOpportunitiesLabel.text = namaOpportunities[indexPath.row]
-        cell?.tanggalOpportunitiesLabel.text = tanggalOpportunities[indexPath.row]
-        cell?.tempatOpportunitiesLabel.text = tempatOpportunities[indexPath.row]
-        cell?.statusOpportunitiesLabel.text = statusOpportunities[indexPath.row]
+        let totalVol = opportunities[indexPath.row].dapur + opportunities[indexPath.row].medis + opportunities[indexPath.row].sar
+        
+        cell?.gambarOpportunitiesImage.image = gambarOpportunities[0]
+        cell?.namaOpportunitiesLabel.text = opportunities[indexPath.row].namaOpportunity
+        cell?.tanggalOpportunitiesLabel.text = "\(opportunities[indexPath.row].tanggalMulai) - \(opportunities[indexPath.row].tanggalSelesai)"
+        cell?.tempatOpportunitiesLabel.text = opportunities[indexPath.row].tempat
+        cell?.statusOpportunitiesLabel.text = "\(totalVol) volunteers needed"
         
         return cell!
     }
@@ -36,9 +42,7 @@ class OpportunitiesApplicantViewController: UIViewController,UITableViewDataSour
         if let destination = segue.destination as? DetailOpportunitiesApplicantViewController{
             
             
-            destination.namaOpportunities = namaOpportunities
-            destination.waktuOpportunities = tanggalOpportunities
-            destination.lokasiOpportunities = tempatOpportunities
+            destination.opportunities = opportunities
             destination.index = clickedIndex
            
 //            destination.labelTanggalDetail = tanggalEventOpportunities
@@ -66,8 +70,27 @@ class OpportunitiesApplicantViewController: UIViewController,UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ref = Database.database().reference()
+        self.loadDataFromFirebase()
         // Do any additional setup after loading the view.
+    }
+    
+    func loadDataFromFirebase() {
+        self.ref.child("opportunities").observe(.childAdded) { (snapshot) in
+            let x = snapshot.value as! [String: Any]
+            
+            let a = Opportunity(
+                namaOpportunity: x["namaOpportunity"] as! String,
+                tanggalMulai: x["tanggalMulai"] as! String,
+                tanggalSelesai: x["tanggalSelesai"] as! String,
+                tempat: x["tempat"] as! String,
+                sar: x["sar"] as! Int,
+                medis: x["medis"] as! Int,
+                dapur: x["dapur"] as! Int
+            )
+            self.opportunities.append(a)
+            self.jenisOpportunitiesTable.reloadData()
+        }
     }
     
     

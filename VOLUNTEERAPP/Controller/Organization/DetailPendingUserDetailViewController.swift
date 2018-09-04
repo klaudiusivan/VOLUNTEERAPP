@@ -21,8 +21,9 @@ class DetailPendingUserViewController: UIViewController {
     
     @IBOutlet weak var emailDetailUserPending: UILabel!
     
-    @IBOutlet weak var skillDetailUserPending: UILabel!
-    
+    @IBOutlet weak var medicSkillLbl: UILabel!
+    @IBOutlet weak var dapurSkillLbl: UILabel!
+    @IBOutlet weak var SARSkillLbl: UILabel!
     
     
     var index : Int = 0
@@ -37,15 +38,36 @@ class DetailPendingUserViewController: UIViewController {
     
     var labelSkillDetail : [String] = []
     
-    
-    
+    var users: [User] = []
+    var medicSkill:String = "NO"
+    var DapurSkill:String = "NO"
+    var SARSkill:String = "NO"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        gambarDetailUserPending.image = imageGambarDetail[index]
-        namaDetailUserPending.text = labelNamaDetail[index]
-        skillDetailUserPending.text = labelSkillDetail[index]
+        if users[index].skills["10"] == "1" {
+            DapurSkill = "YES"
+        } else {
+            DapurSkill = "NO"
+        }
+        if users[index].skills["13"] == "1" {
+            medicSkill = "YES"
+        } else {
+            medicSkill = "NO"
+        }
+        if users[index].skills["6"] == "1" {
+            SARSkill = "YES"
+        } else {
+            SARSkill = "NO"
+        }
+        
+        
+        gambarDetailUserPending.image = imageGambarDetail[0]
+        namaDetailUserPending.text = users[index].name
+        emailDetailUserPending.text = users[index].email
+        SARSkillLbl.text = SARSkill
+        medicSkillLbl.text = medicSkill
+        dapurSkillLbl.text = DapurSkill
         
         // Do any additional setup after loading the view.
     }

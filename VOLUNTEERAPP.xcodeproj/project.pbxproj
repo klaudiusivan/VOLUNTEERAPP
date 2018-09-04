@@ -16,6 +16,7 @@
 		89E5EE6F213D771A0030D15D /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E5EE6E213D771A0030D15D /* InitialViewController.swift */; };
 		89E5EE71213E24BB0030D15D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E5EE70213E24BB0030D15D /* SignUpViewController.swift */; };
 		89E5EE73213E71E90030D15D /* Opportunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E5EE72213E71E90030D15D /* Opportunity.swift */; };
+		89E5EE75213EB3A60030D15D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E5EE74213EB3A60030D15D /* User.swift */; };
 		B4B87D86226ECB82180CBACF /* Pods_VOLUNTEERAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55794FBD041D031937701418 /* Pods_VOLUNTEERAPP.framework */; };
 		F806C073213D682400CD3E9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F806C072213D682400CD3E9F /* AppDelegate.swift */; };
 		F806C078213D682400CD3E9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F806C076213D682400CD3E9F /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		89E5EE6E213D771A0030D15D /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		89E5EE70213E24BB0030D15D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		89E5EE72213E71E90030D15D /* Opportunity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opportunity.swift; sourceTree = "<group>"; };
+		89E5EE74213EB3A60030D15D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8AFDF0FFED059DCFEF9A2CFF /* Pods-VOLUNTEERAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VOLUNTEERAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VOLUNTEERAPP/Pods-VOLUNTEERAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		F806C06F213D682400CD3E9F /* VOLUNTEERAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VOLUNTEERAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F806C072213D682400CD3E9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				F8DAF416213E2C9C005BE1C3 /* PendingUserViewController.swift */,
 				7CAEA32D213E49B000B5DB2D /* PendingUserTableViewCell.swift */,
 				F8A75448213E460F00964462 /* AddOpportunitiesViewController.swift */,
+				89E5EE74213EB3A60030D15D /* User.swift */,
 			);
 			path = Organization;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				7C67C6FB213E1ABD005AEB1D /* OpportunitiesViewController.swift in Sources */,
 				7C9F8A4F213E945800804133 /* DetailCollectionViewCell.swift in Sources */,
 				89E5EE73213E71E90030D15D /* Opportunity.swift in Sources */,
+				89E5EE75213EB3A60030D15D /* User.swift in Sources */,
 				89E5EE71213E24BB0030D15D /* SignUpViewController.swift in Sources */,
 				89E5EE6F213D771A0030D15D /* InitialViewController.swift in Sources */,
 				F8DAF41D213E2C9C005BE1C3 /* DetailPendingUserDetailViewController.swift in Sources */,
