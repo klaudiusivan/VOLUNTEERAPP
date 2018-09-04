@@ -18,8 +18,13 @@
 		F806C07B213D682400CD3E9F /* VOLUNTEERAPP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F806C079213D682400CD3E9F /* VOLUNTEERAPP.xcdatamodeld */; };
 		F806C07D213D682800CD3E9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F806C07C213D682800CD3E9F /* Assets.xcassets */; };
 		F806C080213D682800CD3E9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F806C07E213D682800CD3E9F /* LaunchScreen.storyboard */; };
-		F806C089213D6B1A00CD3E9F /* Organization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F806C087213D6B1A00CD3E9F /* Organization.storyboard */; };
 		F806C08B213D6B5700CD3E9F /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F806C08A213D6B5700CD3E9F /* User.storyboard */; };
+		F8A75445213E34B200964462 /* OpportunitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A75444213E34B200964462 /* OpportunitiesCell.swift */; };
+		F8DAF41A213E2C9C005BE1C3 /* PendingUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DAF416213E2C9C005BE1C3 /* PendingUserViewController.swift */; };
+		F8DAF41B213E2C9C005BE1C3 /* OpportunitiesApplicantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DAF417213E2C9C005BE1C3 /* OpportunitiesApplicantViewController.swift */; };
+		F8DAF41C213E2C9C005BE1C3 /* DetailOpportunitiesApplicantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DAF418213E2C9C005BE1C3 /* DetailOpportunitiesApplicantViewController.swift */; };
+		F8DAF41D213E2C9C005BE1C3 /* DetailPendingUserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DAF419213E2C9C005BE1C3 /* DetailPendingUserDetailViewController.swift */; };
+		F8DAF421213E2D9B005BE1C3 /* Organization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8DAF420213E2D9B005BE1C3 /* Organization.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +43,13 @@
 		F806C07C213D682800CD3E9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F806C07F213D682800CD3E9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F806C081213D682800CD3E9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F806C088213D6B1A00CD3E9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = VOLUNTEERAPP/Base.lproj/Organization.storyboard; sourceTree = "<group>"; };
 		F806C08A213D6B5700CD3E9F /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		F8A75444213E34B200964462 /* OpportunitiesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpportunitiesCell.swift; path = VOLUNTEERAPP/Model/Organization/OpportunitiesCell.swift; sourceTree = SOURCE_ROOT; };
+		F8DAF416213E2C9C005BE1C3 /* PendingUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingUserViewController.swift; sourceTree = "<group>"; };
+		F8DAF417213E2C9C005BE1C3 /* OpportunitiesApplicantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunitiesApplicantViewController.swift; sourceTree = "<group>"; };
+		F8DAF418213E2C9C005BE1C3 /* DetailOpportunitiesApplicantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailOpportunitiesApplicantViewController.swift; sourceTree = "<group>"; };
+		F8DAF419213E2C9C005BE1C3 /* DetailPendingUserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPendingUserDetailViewController.swift; sourceTree = "<group>"; };
+		F8DAF420213E2D9B005BE1C3 /* Organization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Organization.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +101,7 @@
 		89E5EE65213D6D1A0030D15D /* Organization */ = {
 			isa = PBXGroup;
 			children = (
-				F806C087213D6B1A00CD3E9F /* Organization.storyboard */,
+				F8DAF420213E2D9B005BE1C3 /* Organization.storyboard */,
 			);
 			path = Organization;
 			sourceTree = "<group>";
@@ -114,14 +124,6 @@
 				F806C08C213D6EA300CD3E9F /* Organization */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		89E5EE68213D6E130030D15D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F806C08D213D6EB000CD3E9F /* Organization */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		89E5EE6B213D75E70030D15D /* Initial */ = {
@@ -162,7 +164,7 @@
 		F806C071213D682400CD3E9F /* VOLUNTEERAPP */ = {
 			isa = PBXGroup;
 			children = (
-				89E5EE68213D6E130030D15D /* Model */,
+				F8A75440213E347000964462 /* Model */,
 				89E5EE67213D6DFE0030D15D /* Controller */,
 				89E5EE66213D6DE10030D15D /* View */,
 				F806C072213D682400CD3E9F /* AppDelegate.swift */,
@@ -178,13 +180,27 @@
 		F806C08C213D6EA300CD3E9F /* Organization */ = {
 			isa = PBXGroup;
 			children = (
+				F8DAF418213E2C9C005BE1C3 /* DetailOpportunitiesApplicantViewController.swift */,
+				F8DAF419213E2C9C005BE1C3 /* DetailPendingUserDetailViewController.swift */,
+				F8DAF417213E2C9C005BE1C3 /* OpportunitiesApplicantViewController.swift */,
+				F8DAF416213E2C9C005BE1C3 /* PendingUserViewController.swift */,
 			);
 			path = Organization;
 			sourceTree = "<group>";
 		};
-		F806C08D213D6EB000CD3E9F /* Organization */ = {
+		F8A75440213E347000964462 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F8A75443213E34A100964462 /* Organization */,
+			);
+			name = Model;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		F8A75443213E34A100964462 /* Organization */ = {
+			isa = PBXGroup;
+			children = (
+				F8A75444213E34B200964462 /* OpportunitiesCell.swift */,
 			);
 			path = Organization;
 			sourceTree = "<group>";
@@ -200,6 +216,7 @@
 				F806C06B213D682400CD3E9F /* Sources */,
 				F806C06C213D682400CD3E9F /* Frameworks */,
 				F806C06D213D682400CD3E9F /* Resources */,
+				3E9D14BF04FD94A78044801C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,8 +268,8 @@
 				F806C080213D682800CD3E9F /* LaunchScreen.storyboard in Resources */,
 				F806C08B213D6B5700CD3E9F /* User.storyboard in Resources */,
 				F806C07D213D682800CD3E9F /* Assets.xcassets in Resources */,
+				F8DAF421213E2D9B005BE1C3 /* Organization.storyboard in Resources */,
 				F806C078213D682400CD3E9F /* Main.storyboard in Resources */,
-				F806C089213D6B1A00CD3E9F /* Organization.storyboard in Resources */,
 				89E5EE6A213D6ED00030D15D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +277,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3E9D14BF04FD94A78044801C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VOLUNTEERAPP/Pods-VOLUNTEERAPP-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VOLUNTEERAPP/Pods-VOLUNTEERAPP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		773C6ECFBE4449461C0760F2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,12 +326,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8DAF41A213E2C9C005BE1C3 /* PendingUserViewController.swift in Sources */,
 				7C67C6FB213E1ABD005AEB1D /* OpportunitiesViewController.swift in Sources */,
 				89E5EE6F213D771A0030D15D /* InitialViewController.swift in Sources */,
+				F8DAF41D213E2C9C005BE1C3 /* DetailPendingUserDetailViewController.swift in Sources */,
 				7C67C6FF213E1AED005AEB1D /* OpportunitiesTableViewCell.swift in Sources */,
 				F806C07B213D682400CD3E9F /* VOLUNTEERAPP.xcdatamodeld in Sources */,
+				F8DAF41B213E2C9C005BE1C3 /* OpportunitiesApplicantViewController.swift in Sources */,
 				F806C073213D682400CD3E9F /* AppDelegate.swift in Sources */,
+				F8DAF41C213E2C9C005BE1C3 /* DetailOpportunitiesApplicantViewController.swift in Sources */,
 				7C67C6FD213E1AD2005AEB1D /* DetailOpportunitiesViewController.swift in Sources */,
+				F8A75445213E34B200964462 /* OpportunitiesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,14 +357,6 @@
 				F806C07F213D682800CD3E9F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		F806C087213D6B1A00CD3E9F /* Organization.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F806C088213D6B1A00CD3E9F /* Base */,
-			);
-			name = Organization.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
