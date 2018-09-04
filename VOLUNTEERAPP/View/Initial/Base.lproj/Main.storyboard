@@ -121,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="941" y="204"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="yNK-5H-Mab">
             <objects>
-                <viewController id="oF2-c7-7tO" sceneMemberID="viewController">
+                <viewController id="oF2-c7-7tO" customClass="SignUpViewController" customModule="VOLUNTEERAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pzv-aS-bii">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,6 +157,9 @@
                                         <rect key="frame" x="122" y="387" width="55" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Sign Up"/>
+                                        <connections>
+                                            <action selector="signUpBtn:" destination="oF2-c7-7tO" eventType="touchUpInside" id="kGF-At-fxA"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pm8-jg-GEj">
                                         <rect key="frame" x="40" y="49" width="45" height="21"/>
@@ -189,6 +192,14 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wS-PZ-fbt">
+                                <rect key="frame" x="159" y="396" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Choose Skills"/>
+                                <connections>
+                                    <action selector="chooseSkillsBtn:" destination="oF2-c7-7tO" eventType="touchUpInside" id="Ybp-CA-fbp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -199,8 +210,222 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hT1-Vl-Mic"/>
                     </view>
+                    <connections>
+                        <outlet property="SAROutlet" destination="Qu6-3J-Hkr" id="vHk-hp-3Qe"/>
+                        <outlet property="administrasiOutlet" destination="B4b-9h-EUA" id="GYW-rV-xQF"/>
+                        <outlet property="bahasaOutlet" destination="fjx-HC-9Ep" id="cqY-cR-Jdx"/>
+                        <outlet property="dapurUmumOutlet" destination="DcX-Lw-Seg" id="lN0-UC-dMx"/>
+                        <outlet property="emailField" destination="KPq-NC-1Yx" id="MSu-QQ-hJm"/>
+                        <outlet property="genderOutlet" destination="moz-cQ-cdT" id="KFM-08-5K6"/>
+                        <outlet property="geoDanMapOutlet" destination="cEI-lY-3WF" id="eNF-tf-3QN"/>
+                        <outlet property="humasOutlet" destination="sLO-mw-xc3" id="e8M-qp-cty"/>
+                        <outlet property="kajiCptOutlet" destination="LLu-kX-fwf" id="pO9-3S-EvP"/>
+                        <outlet property="keamananOutlet" destination="TeS-1V-Mwz" id="0p2-7P-spV"/>
+                        <outlet property="keuanganOutlet" destination="C4R-y4-X1f" id="jud-NO-FpL"/>
+                        <outlet property="kominfoOutlet" destination="cWg-od-5XA" id="zIS-tC-xBC"/>
+                        <outlet property="logistikOutlet" destination="sos-3n-4KF" id="dWr-0M-bPm"/>
+                        <outlet property="medisOutlet" destination="wvk-RF-l0L" id="Nsv-IU-rc6"/>
+                        <outlet property="nameField" destination="7bN-jU-gY3" id="maj-rH-ARM"/>
+                        <outlet property="panganDanNutrisiOutlet" destination="Xzk-cw-twQ" id="kgL-HI-GCy"/>
+                        <outlet property="passwordField" destination="GBY-7T-mCE" id="MUw-yY-qeE"/>
+                        <outlet property="pelatihanDanSimulasiOutlet" destination="1e4-fd-EJT" id="nr1-Uf-CO3"/>
+                        <outlet property="pemantauanOutlet" destination="s7s-2f-JXl" id="RSe-xQ-qF9"/>
+                        <outlet property="pendidikanOutlet" destination="SW5-jk-1Ff" id="YnS-cx-TDM"/>
+                        <outlet property="pengungsianDanHuntaraOutlet" destination="hyu-Cc-JEu" id="sTh-eg-eVI"/>
+                        <outlet property="perencanaanOutlet" destination="5qs-t2-sSa" id="80w-oB-d5O"/>
+                        <outlet property="pertanianOutlet" destination="Gk5-YF-lzA" id="j36-Uk-rPU"/>
+                        <outlet property="pertukanganOutlet" destination="P0Y-nh-KGy" id="nsC-GJ-AaS"/>
+                        <outlet property="poskoBencanaOutlet" destination="uC1-vW-UXz" id="rwo-As-n8Q"/>
+                        <outlet property="promosiDanRelawanOutlet" destination="298-iY-lHf" id="Sgb-3v-Mry"/>
+                        <outlet property="psikososialOutlet" destination="SFD-kh-9lm" id="jiX-gZ-Llc"/>
+                        <outlet property="sanitasiOutlet" destination="R91-gA-z15" id="k9u-VO-Ajm"/>
+                        <outlet property="skillView" destination="CGp-Pr-WRR" id="hCQ-5n-VwD"/>
+                        <outlet property="transportasiOutlet" destination="WAF-FY-haQ" id="y9X-1d-rdT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ItW-f9-cCY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="CGp-Pr-WRR">
+                    <rect key="frame" x="0.0" y="0.0" width="370" height="770"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SW5-jk-1Ff">
+                            <rect key="frame" x="114" y="8" width="67" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Pendidikan"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEI-lY-3WF">
+                            <rect key="frame" x="16" y="75" width="254" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Sistem Informasi Geografis dan Pemetaan"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1e4-fd-EJT">
+                            <rect key="frame" x="16" y="111" width="236" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Pelatihan, Geladi dan simulasi bencana"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLu-kX-fwf">
+                            <rect key="frame" x="204" y="39" width="117" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Kaji Cepat bencana"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qu6-3J-Hkr">
+                            <rect key="frame" x="16" y="147" width="270" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Pencarian Penyelamatan (SAR) dan Evakuasi"/>
+                            <connections>
+                                <action selector="sarBtn:" destination="oF2-c7-7tO" eventType="touchUpInside" id="hxx-0Y-iTr"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAF-FY-haQ">
+                            <rect key="frame" x="204" y="8" width="76" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Transportasi"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sos-3n-4KF">
+                            <rect key="frame" x="13" y="39" width="47" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Logistik"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzk-cw-twQ">
+                            <rect key="frame" x="16" y="183" width="181" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Keamanan Pangan dan Nutrisi"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcX-Lw-Seg">
+                            <rect key="frame" x="16" y="219" width="80" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Dapur Umum"/>
+                            <connections>
+                                <action selector="dapurUmumBtn:" destination="oF2-c7-7tO" eventType="touchUpInside" id="vde-NN-3hH"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyu-Cc-JEu">
+                            <rect key="frame" x="16" y="255" width="276" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Pengelolaan Lokasi Pengungsian dan Huntara"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uC1-vW-UXz">
+                            <rect key="frame" x="16" y="291" width="275" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Pengelolaan Posko Penanggulangan Bencana"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvk-RF-l0L">
+                            <rect key="frame" x="133" y="219" width="105" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Kesehatan/Medis"/>
+                            <connections>
+                                <action selector="medisBtn:" destination="oF2-c7-7tO" eventType="touchUpInside" id="8te-eT-zTr"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R91-gA-z15">
+                            <rect key="frame" x="16" y="327" width="281" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Air Bersih, Sanitasi dan Kesehatan Lingkungan"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeS-1V-Mwz">
+                            <rect key="frame" x="16" y="363" width="173" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Keamanan dan Perlindungan"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moz-cQ-cdT">
+                            <rect key="frame" x="13" y="399" width="181" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Gender dan Kelompok Rentan"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFD-kh-9lm">
+                            <rect key="frame" x="16" y="511" width="269" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Psikososial/Konseling/Penyembuhan Trauma"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0Y-nh-KGy">
+                            <rect key="frame" x="16" y="583" width="190" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Pertukangan dan Perekayasaan"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gk5-YF-lzA">
+                            <rect key="frame" x="16" y="619" width="243" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Pertanian, Peternakan dan Penghidupan"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4b-9h-EUA">
+                            <rect key="frame" x="114" y="39" width="75" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Administrasi"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4R-y4-X1f">
+                            <rect key="frame" x="16" y="727" width="138" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Pengelolaan Keuangan"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjx-HC-9Ep">
+                            <rect key="frame" x="16" y="655" width="82" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Bahasa Asing"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWg-od-5XA">
+                            <rect key="frame" x="16" y="691" width="156" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Informasi Dan Komunikasi"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLO-mw-xc3">
+                            <rect key="frame" x="16" y="547" width="202" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Hubungan Media dan Masyarakat"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7s-2f-JXl">
+                            <rect key="frame" x="16" y="440" width="222" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Pemantauan, Evaluasi dan Pelaporan"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="298-iY-lHf">
+                            <rect key="frame" x="16" y="475" width="193" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Promosi dan Mobilisasi Relawan"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="act-iY-D0U">
+                            <rect key="frame" x="267" y="725" width="54" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Done"/>
+                            <connections>
+                                <action selector="doneSkillsBtn:" destination="oF2-c7-7tO" eventType="touchUpInside" id="XOo-gT-CfR"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qs-t2-sSa">
+                            <rect key="frame" x="13" y="8" width="79" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Perencanaan"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="0PE-0V-6zz"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="1541.5999999999999" y="353.94088669950742"/>
         </scene>
