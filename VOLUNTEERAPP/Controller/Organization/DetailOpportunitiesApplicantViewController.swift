@@ -18,6 +18,8 @@ class DetailOpportunitiesApplicantViewController: UIViewController {
     
     var lokasiOpportunities : [String] = []
     
+    var opportunities: [Opportunity] = []
+    
 
     @IBOutlet weak var namaOpportunitiesTextField: UITextField!
     
@@ -28,9 +30,9 @@ class DetailOpportunitiesApplicantViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        namaOpportunitiesTextField.text = namaOpportunities[index]
-        waktuOpportunitiesTextField.text = waktuOpportunities[index]
-        lokasiOpportunitiesTextField.text = lokasiOpportunities[index]
+        namaOpportunitiesTextField.text = opportunities[index].namaOpportunity
+        waktuOpportunitiesTextField.text = "\(opportunities[index].tanggalMulai) - \(opportunities[index].tanggalSelesai)"
+        lokasiOpportunitiesTextField.text = opportunities[index].tempat
         
         // Do any additional setup after loading the view.
     }

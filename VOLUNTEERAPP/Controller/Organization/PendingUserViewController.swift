@@ -7,18 +7,28 @@
 //
 
 import UIKit
+import Firebase
 
 class PendingUserViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var ref:DatabaseReference!
+    var users:[User] = []
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return namaPendingUser.count
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = pendingUserTable.dequeueReusableCell(withIdentifier: "PendingUserCell", for: indexPath) as? PendingUserTableViewCell
+        var a:String
+        if users[indexPath.row].verified == 0 {
+             a = "NO"
+        } else {
+             a = "YES"
+        }
         
-        cell?.imagePendingUserCell.image = gambarPendingUser[indexPath.row]
-        cell?.namePendingUserCell.text = namaPendingUser[indexPath.row]
-        cell?.skillPendingUserCell.text = skillPendingUser[indexPath.row]
+        cell?.imagePendingUserCell.image = gambarPendingUser[0]
+        cell?.namePendingUserCell.text = users[indexPath.row].name
+        cell?.skillPendingUserCell.text = a
         
         return cell!
     }
@@ -44,15 +54,9 @@ class PendingUserViewController: UIViewController, UITableViewDelegate, UITableV
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? DetailPendingUserViewController{
             
-            
-            
             destination.imageGambarDetail = gambarPendingUser
-            destination.labelNamaDetail = namaPendingUser
-            destination.labelSkillDetail = skillPendingUser
-            
-            
+            destination.users = users
             destination.index = clickedIndex
-            
             
         }
     }
@@ -63,16 +67,48 @@ class PendingUserViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ref = Database.database().reference()
+        self.loadDataFromFirebase()
         // Do any additional setup after loading the view.
     }
-
+    
+    func loadDataFromFirebase() {
+        self.ref.child("users").queryOrdered(byChild: "verified").queryEqual(toValue: 0).observeSingleEvent(of: .value) { (snapshot) in
+            let x = snapshot.value as! [String: Any]
+            for (_,value) in x {
+                let b = value as! [String:Any]
+                let a = User(
+                UID: b["UID"] as! String,
+                email: b["email"] as! String,
+                name: b["name"] as! String,
+                skills: b["skills"] as! [String:String],
+                verified: b["verified"] as! Int
+            )
+            self.users.append(a)
+            self.pendingUserTable.reloadData()
+            }
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    //            let x = snapshot.value as! [String: Any]
+//    print("A")
+    //            print(x)
+    //            let a = User(
+    //                UID: x["UID"] as! String,
+    //                email: x["email"] as! String,
+    //                name: x["name"] as! String,
+    //                skills: x["skills"] as! [Int:Int],
+    //                verified: x["verified"] as! Int
+    //            )
+    //            self.users.append(a)
+    //            print(a.skills)
+    //            self.pendingUserTable.reloadData()
+    
+    
     /*
     // MARK: - Navigation
 
