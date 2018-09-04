@@ -10,6 +10,7 @@
 		7C67C6FB213E1ABD005AEB1D /* OpportunitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C67C6FA213E1ABD005AEB1D /* OpportunitiesViewController.swift */; };
 		7C67C6FD213E1AD2005AEB1D /* DetailOpportunitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C67C6FC213E1AD2005AEB1D /* DetailOpportunitiesViewController.swift */; };
 		7C67C6FF213E1AED005AEB1D /* OpportunitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C67C6FE213E1AED005AEB1D /* OpportunitiesTableViewCell.swift */; };
+		7CAEA32E213E49B000B5DB2D /* PendingUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAEA32D213E49B000B5DB2D /* PendingUserTableViewCell.swift */; };
 		89E5EE6A213D6ED00030D15D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89E5EE69213D6ECF0030D15D /* GoogleService-Info.plist */; };
 		89E5EE6F213D771A0030D15D /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E5EE6E213D771A0030D15D /* InitialViewController.swift */; };
 		B4B87D86226ECB82180CBACF /* Pods_VOLUNTEERAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55794FBD041D031937701418 /* Pods_VOLUNTEERAPP.framework */; };
@@ -20,7 +21,6 @@
 		F806C080213D682800CD3E9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F806C07E213D682800CD3E9F /* LaunchScreen.storyboard */; };
 		F806C08B213D6B5700CD3E9F /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F806C08A213D6B5700CD3E9F /* User.storyboard */; };
 		F8A75445213E34B200964462 /* OpportunitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A75444213E34B200964462 /* OpportunitiesCell.swift */; };
-		F8A75447213E384E00964462 /* Model in Resources */ = {isa = PBXBuildFile; fileRef = F8A75446213E384E00964462 /* Model */; };
 		F8DAF41A213E2C9C005BE1C3 /* PendingUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DAF416213E2C9C005BE1C3 /* PendingUserViewController.swift */; };
 		F8DAF41B213E2C9C005BE1C3 /* OpportunitiesApplicantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DAF417213E2C9C005BE1C3 /* OpportunitiesApplicantViewController.swift */; };
 		F8DAF41C213E2C9C005BE1C3 /* DetailOpportunitiesApplicantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DAF418213E2C9C005BE1C3 /* DetailOpportunitiesApplicantViewController.swift */; };
@@ -34,6 +34,7 @@
 		7C67C6FA213E1ABD005AEB1D /* OpportunitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunitiesViewController.swift; sourceTree = "<group>"; };
 		7C67C6FC213E1AD2005AEB1D /* DetailOpportunitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOpportunitiesViewController.swift; sourceTree = "<group>"; };
 		7C67C6FE213E1AED005AEB1D /* OpportunitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunitiesTableViewCell.swift; sourceTree = "<group>"; };
+		7CAEA32D213E49B000B5DB2D /* PendingUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingUserTableViewCell.swift; sourceTree = "<group>"; };
 		89E5EE69213D6ECF0030D15D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		89E5EE6E213D771A0030D15D /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		8AFDF0FFED059DCFEF9A2CFF /* Pods-VOLUNTEERAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VOLUNTEERAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VOLUNTEERAPP/Pods-VOLUNTEERAPP.debug.xcconfig"; sourceTree = "<group>"; };
@@ -46,7 +47,6 @@
 		F806C081213D682800CD3E9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F806C08A213D6B5700CD3E9F /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		F8A75444213E34B200964462 /* OpportunitiesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpportunitiesCell.swift; path = VOLUNTEERAPP/Controller/Organization/OpportunitiesCell.swift; sourceTree = SOURCE_ROOT; };
-		F8A75446213E384E00964462 /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
 		F8DAF416213E2C9C005BE1C3 /* PendingUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingUserViewController.swift; sourceTree = "<group>"; };
 		F8DAF417213E2C9C005BE1C3 /* OpportunitiesApplicantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunitiesApplicantViewController.swift; sourceTree = "<group>"; };
 		F8DAF418213E2C9C005BE1C3 /* DetailOpportunitiesApplicantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailOpportunitiesApplicantViewController.swift; sourceTree = "<group>"; };
@@ -166,7 +166,6 @@
 		F806C071213D682400CD3E9F /* VOLUNTEERAPP */ = {
 			isa = PBXGroup;
 			children = (
-				F8A75446213E384E00964462 /* Model */,
 				89E5EE67213D6DFE0030D15D /* Controller */,
 				89E5EE66213D6DE10030D15D /* View */,
 				F806C072213D682400CD3E9F /* AppDelegate.swift */,
@@ -187,6 +186,7 @@
 				F8DAF419213E2C9C005BE1C3 /* DetailPendingUserDetailViewController.swift */,
 				F8DAF417213E2C9C005BE1C3 /* OpportunitiesApplicantViewController.swift */,
 				F8DAF416213E2C9C005BE1C3 /* PendingUserViewController.swift */,
+				7CAEA32D213E49B000B5DB2D /* PendingUserTableViewCell.swift */,
 			);
 			path = Organization;
 			sourceTree = "<group>";
@@ -255,7 +255,6 @@
 				F806C08B213D6B5700CD3E9F /* User.storyboard in Resources */,
 				F806C07D213D682800CD3E9F /* Assets.xcassets in Resources */,
 				F8DAF421213E2D9B005BE1C3 /* Organization.storyboard in Resources */,
-				F8A75447213E384E00964462 /* Model in Resources */,
 				F806C078213D682400CD3E9F /* Main.storyboard in Resources */,
 				89E5EE6A213D6ED00030D15D /* GoogleService-Info.plist in Resources */,
 			);
@@ -317,6 +316,7 @@
 				7C67C6FB213E1ABD005AEB1D /* OpportunitiesViewController.swift in Sources */,
 				89E5EE6F213D771A0030D15D /* InitialViewController.swift in Sources */,
 				F8DAF41D213E2C9C005BE1C3 /* DetailPendingUserDetailViewController.swift in Sources */,
+				7CAEA32E213E49B000B5DB2D /* PendingUserTableViewCell.swift in Sources */,
 				7C67C6FF213E1AED005AEB1D /* OpportunitiesTableViewCell.swift in Sources */,
 				F806C07B213D682400CD3E9F /* VOLUNTEERAPP.xcdatamodeld in Sources */,
 				F8DAF41B213E2C9C005BE1C3 /* OpportunitiesApplicantViewController.swift in Sources */,
