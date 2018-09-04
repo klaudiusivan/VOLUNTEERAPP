@@ -138,31 +138,61 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bYx-PX-ku7">
-                                <rect key="frame" x="16" y="266" width="343" height="377"/>
+                                <rect key="frame" x="16" y="266" width="343" height="419"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UgN-Pl-dMx">
-                                    <size key="itemSize" width="179" height="173"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="25" minimumInteritemSpacing="0.0" id="UgN-Pl-dMx">
+                                    <size key="itemSize" width="155" height="173"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="25" maxX="5" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ddX-TW-kPf">
-                                        <rect key="frame" x="82" y="0.0" width="179" height="173"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DetailCollection" id="ddX-TW-kPf" customClass="DetailCollectionViewCell" customModule="VOLUNTEERAPP" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="25" width="155" height="173"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="179" height="173"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="155" height="173"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a0O-Bm-3Lb">
+                                                    <rect key="frame" x="25" y="0.0" width="110" height="110"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SAR =" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VhY-70-b4d">
+                                                    <rect key="frame" x="20" y="130" width="82" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.99442642869999998" green="1" blue="0.99832965360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHQ-Fp-aKd">
+                                                    <rect key="frame" x="95" y="117" width="46" height="48"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.99442642869999998" green="1" blue="0.99832965360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
+                                        <connections>
+                                            <outlet property="gambarDetailCell" destination="a0O-Bm-3Lb" id="B5J-OE-NIz"/>
+                                            <outlet property="jumlahDetailCell" destination="EHQ-Fp-aKd" id="yDU-Kn-4mW"/>
+                                            <outlet property="skillDetailCell" destination="VhY-70-b4d" id="2zC-8d-0C0"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="zjX-Qr-PcJ" id="h3u-sa-7Kh"/>
+                                    <outlet property="delegate" destination="zjX-Qr-PcJ" id="0t0-eb-cpo"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Qid-Ct-nlG"/>
                     </view>
                     <connections>
+                        <outlet property="detailCollection" destination="bYx-PX-ku7" id="oyX-B7-BvY"/>
                         <outlet property="gambarDetail" destination="P7P-BY-mzE" id="ziy-Rd-NVf"/>
                         <outlet property="tanggalLbl" destination="50H-ko-R3v" id="9zh-rz-sdO"/>
                         <outlet property="titleEvent" destination="NCP-Ja-PvT" id="iNb-2O-df1"/>
