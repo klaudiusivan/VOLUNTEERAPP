@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Opportunities View Controller-->
+        <!--Available Opportunities-->
         <scene sceneID="hzH-06-8Y3">
             <objects>
-                <viewController id="C0J-y5-R4U" customClass="OpportunitiesViewController" customModule="VOLUNTEERAPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Available Opportunities" id="C0J-y5-R4U" customClass="OpportunitiesViewController" customModule="VOLUNTEERAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kfl-jn-gBr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,21 +33,21 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GempaLombok" translatesAutoresizingMaskIntoConstraints="NO" id="0W9-Y6-nTy">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="362"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gempa Lombok" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaK-Oi-ogw">
-                                                    <rect key="frame" x="44.333333333333343" y="22.666666666666668" width="285.66666666666663" height="50.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gempa Lombok" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaK-Oi-ogw">
+                                                    <rect key="frame" x="39" y="19" width="296" height="54"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <color key="textColor" red="0.99442642869999998" green="1" blue="0.99832965360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16 Agustus - 16 September" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNb-84-Cie">
-                                                    <rect key="frame" x="39.666666666666657" y="68" width="294.66666666666674" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="16 Agustus - 16 September" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNb-84-Cie">
+                                                    <rect key="frame" x="39" y="56" width="296" height="54"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.99442642869999998" green="1" blue="0.99832965360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Volunteer Needed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgv-wq-JjK">
-                                                    <rect key="frame" x="80.000000000000014" y="317" width="214.33333333333337" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5 Volunteer Needed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgv-wq-JjK">
+                                                    <rect key="frame" x="39" y="297" width="296" height="54"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="0.99442642869999998" green="1" blue="0.99832965360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -82,7 +82,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="EUT-TN-i59"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4bF-tX-FBV"/>
+                    <navigationItem key="navigationItem" title="Available Opportunities" id="4bF-tX-FBV"/>
                     <connections>
                         <outlet property="opportunitiesTable" destination="9lL-ZN-cUP" id="DvU-kC-0Fb"/>
                         <segue destination="zjX-Qr-PcJ" kind="show" identifier="DetailOpportunities" id="WyG-7m-Mks"/>
@@ -164,7 +164,9 @@
                     </view>
                     <connections>
                         <outlet property="gambarDetail" destination="P7P-BY-mzE" id="ziy-Rd-NVf"/>
-                        <outlet property="tanggalDetail" destination="50H-ko-R3v" id="OwG-67-Gsl"/>
+                        <outlet property="tanggalLbl" destination="50H-ko-R3v" id="9zh-rz-sdO"/>
+                        <outlet property="titleEvent" destination="NCP-Ja-PvT" id="iNb-2O-df1"/>
+                        <outlet property="totalVolLable" destination="oxg-1x-eyn" id="cQA-aO-88b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8V-zG-awq" userLabel="First Responder" sceneMemberID="firstResponder"/>

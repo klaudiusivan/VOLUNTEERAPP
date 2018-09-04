@@ -210,9 +210,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTB-tJ-GlG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTB-tJ-GlG">
                                 <rect key="frame" x="163" y="748" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="submitOpportunity:" destination="xUG-4Z-g12" eventType="touchUpInside" id="o40-4j-s8a"/>
@@ -258,6 +257,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="brE-zi-Ehu" firstAttribute="bottom" secondItem="zTB-tJ-GlG" secondAttribute="bottom" id="B3z-L6-gG0"/>
+                            <constraint firstItem="zTB-tJ-GlG" firstAttribute="centerX" secondItem="brE-zi-Ehu" secondAttribute="centerX" id="qiy-yV-Jm1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="brE-zi-Ehu"/>
                     </view>
                     <connections>

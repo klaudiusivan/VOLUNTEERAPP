@@ -12,15 +12,20 @@ class DetailOpportunitiesViewController: UIViewController {
     
     var index : Int = 0
     var imageGambarDetail: [UIImage] = []
-    var labelTanggalDetail: [String] = []
+    var opportunities: [Opportunity] = []
     
+    @IBOutlet weak var tanggalLbl: UILabel!
+    @IBOutlet weak var titleEvent: UILabel!
+    @IBOutlet weak var totalVolLable: UILabel!
     @IBOutlet weak var gambarDetail: UIImageView!
-    @IBOutlet weak var tanggalDetail: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gambarDetail.image = imageGambarDetail[index]
-        tanggalDetail.text = labelTanggalDetail[index]
+        var totalVol = opportunities[index].dapur + opportunities[index].medis + opportunities[index].sar
+        gambarDetail.image = imageGambarDetail[1]
+        titleEvent.text = opportunities[index].namaOpportunity
+        tanggalLbl.text = "\(opportunities[index].tanggalMulai)-\(opportunities[index].tanggalSelesai)"
+        totalVolLable.text = "\(totalVol) Volunteer/s Needed"
         
    
         // Do any additional setup after loading the view.
