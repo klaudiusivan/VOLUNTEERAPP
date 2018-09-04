@@ -11,7 +11,6 @@ import UIKit
 class OpportunitiesApplicantViewController: UIViewController {
     //MARK - Outlets
     
-    @IBOutlet weak var OpportunitiesApplicantTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
