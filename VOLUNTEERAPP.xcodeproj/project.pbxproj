@@ -20,7 +20,7 @@
 		F806C080213D682800CD3E9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F806C07E213D682800CD3E9F /* LaunchScreen.storyboard */; };
 		F806C08B213D6B5700CD3E9F /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F806C08A213D6B5700CD3E9F /* User.storyboard */; };
 		F8A75445213E34B200964462 /* OpportunitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A75444213E34B200964462 /* OpportunitiesCell.swift */; };
-		F8A75447213E384E00964462 /* Model in Resources */ = {isa = PBXBuildFile; fileRef = F8A75446213E384E00964462 /* Model */; };
+		F8A75449213E460F00964462 /* AddOpportunitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A75448213E460F00964462 /* AddOpportunitiesViewController.swift */; };
 		F8DAF41A213E2C9C005BE1C3 /* PendingUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DAF416213E2C9C005BE1C3 /* PendingUserViewController.swift */; };
 		F8DAF41B213E2C9C005BE1C3 /* OpportunitiesApplicantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DAF417213E2C9C005BE1C3 /* OpportunitiesApplicantViewController.swift */; };
 		F8DAF41C213E2C9C005BE1C3 /* DetailOpportunitiesApplicantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DAF418213E2C9C005BE1C3 /* DetailOpportunitiesApplicantViewController.swift */; };
@@ -46,7 +46,7 @@
 		F806C081213D682800CD3E9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F806C08A213D6B5700CD3E9F /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		F8A75444213E34B200964462 /* OpportunitiesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpportunitiesCell.swift; path = VOLUNTEERAPP/Controller/Organization/OpportunitiesCell.swift; sourceTree = SOURCE_ROOT; };
-		F8A75446213E384E00964462 /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
+		F8A75448213E460F00964462 /* AddOpportunitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOpportunitiesViewController.swift; sourceTree = "<group>"; };
 		F8DAF416213E2C9C005BE1C3 /* PendingUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingUserViewController.swift; sourceTree = "<group>"; };
 		F8DAF417213E2C9C005BE1C3 /* OpportunitiesApplicantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunitiesApplicantViewController.swift; sourceTree = "<group>"; };
 		F8DAF418213E2C9C005BE1C3 /* DetailOpportunitiesApplicantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailOpportunitiesApplicantViewController.swift; sourceTree = "<group>"; };
@@ -166,7 +166,6 @@
 		F806C071213D682400CD3E9F /* VOLUNTEERAPP */ = {
 			isa = PBXGroup;
 			children = (
-				F8A75446213E384E00964462 /* Model */,
 				89E5EE67213D6DFE0030D15D /* Controller */,
 				89E5EE66213D6DE10030D15D /* View */,
 				F806C072213D682400CD3E9F /* AppDelegate.swift */,
@@ -187,6 +186,7 @@
 				F8DAF419213E2C9C005BE1C3 /* DetailPendingUserDetailViewController.swift */,
 				F8DAF417213E2C9C005BE1C3 /* OpportunitiesApplicantViewController.swift */,
 				F8DAF416213E2C9C005BE1C3 /* PendingUserViewController.swift */,
+				F8A75448213E460F00964462 /* AddOpportunitiesViewController.swift */,
 			);
 			path = Organization;
 			sourceTree = "<group>";
@@ -255,7 +255,6 @@
 				F806C08B213D6B5700CD3E9F /* User.storyboard in Resources */,
 				F806C07D213D682800CD3E9F /* Assets.xcassets in Resources */,
 				F8DAF421213E2D9B005BE1C3 /* Organization.storyboard in Resources */,
-				F8A75447213E384E00964462 /* Model in Resources */,
 				F806C078213D682400CD3E9F /* Main.storyboard in Resources */,
 				89E5EE6A213D6ED00030D15D /* GoogleService-Info.plist in Resources */,
 			);
@@ -313,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8A75449213E460F00964462 /* AddOpportunitiesViewController.swift in Sources */,
 				F8DAF41A213E2C9C005BE1C3 /* PendingUserViewController.swift in Sources */,
 				7C67C6FB213E1ABD005AEB1D /* OpportunitiesViewController.swift in Sources */,
 				89E5EE6F213D771A0030D15D /* InitialViewController.swift in Sources */,
