@@ -44,7 +44,7 @@
 		F806C07F213D682800CD3E9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F806C081213D682800CD3E9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F806C08A213D6B5700CD3E9F /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
-		F8A75444213E34B200964462 /* OpportunitiesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpportunitiesCell.swift; path = VOLUNTEERAPP/Model/Organization/OpportunitiesCell.swift; sourceTree = SOURCE_ROOT; };
+		F8A75444213E34B200964462 /* OpportunitiesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpportunitiesCell.swift; path = VOLUNTEERAPP/Controller/Organization/OpportunitiesCell.swift; sourceTree = SOURCE_ROOT; };
 		F8DAF416213E2C9C005BE1C3 /* PendingUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingUserViewController.swift; sourceTree = "<group>"; };
 		F8DAF417213E2C9C005BE1C3 /* OpportunitiesApplicantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunitiesApplicantViewController.swift; sourceTree = "<group>"; };
 		F8DAF418213E2C9C005BE1C3 /* DetailOpportunitiesApplicantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailOpportunitiesApplicantViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +180,7 @@
 		F806C08C213D6EA300CD3E9F /* Organization */ = {
 			isa = PBXGroup;
 			children = (
+				F8A75444213E34B200964462 /* OpportunitiesCell.swift */,
 				F8DAF418213E2C9C005BE1C3 /* DetailOpportunitiesApplicantViewController.swift */,
 				F8DAF419213E2C9C005BE1C3 /* DetailPendingUserDetailViewController.swift */,
 				F8DAF417213E2C9C005BE1C3 /* OpportunitiesApplicantViewController.swift */,
@@ -200,7 +201,6 @@
 		F8A75443213E34A100964462 /* Organization */ = {
 			isa = PBXGroup;
 			children = (
-				F8A75444213E34B200964462 /* OpportunitiesCell.swift */,
 			);
 			path = Organization;
 			sourceTree = "<group>";
