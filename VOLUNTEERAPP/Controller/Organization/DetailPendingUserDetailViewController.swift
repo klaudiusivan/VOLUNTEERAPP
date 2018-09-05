@@ -25,6 +25,7 @@ class DetailPendingUserViewController: UIViewController {
     @IBOutlet weak var dapurSkillLbl: UILabel!
     @IBOutlet weak var SARSkillLbl: UILabel!
     
+    var navigationBarAppearace = UINavigationBar.appearance()
     
     var index : Int = 0
     
@@ -45,6 +46,10 @@ class DetailPendingUserViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Navigation bar
+        navigationBarAppearace.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        navigationBarAppearace.barTintColor = #colorLiteral(red: 0.4980392157, green: 0.768627451, blue: 0.2039215686, alpha: 1)
+        
         if users[index].skills["10"] == "1" {
             DapurSkill = "YES"
         } else {

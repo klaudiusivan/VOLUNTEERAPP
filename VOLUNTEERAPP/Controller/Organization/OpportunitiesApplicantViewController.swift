@@ -12,7 +12,7 @@ import Firebase
 class OpportunitiesApplicantViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     var ref:DatabaseReference!
     var opportunities:[Opportunity] = []
-    
+    var navigationBarAppearace = UINavigationBar.appearance()
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return opportunities.count
     }
@@ -70,6 +70,10 @@ class OpportunitiesApplicantViewController: UIViewController,UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Navigation bar
+        navigationBarAppearace.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        navigationBarAppearace.barTintColor = #colorLiteral(red: 0.4980392157, green: 0.768627451, blue: 0.2039215686, alpha: 1)
+        
         ref = Database.database().reference()
         self.loadDataFromFirebase()
         // Do any additional setup after loading the view.
