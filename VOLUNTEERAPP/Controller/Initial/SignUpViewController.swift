@@ -16,6 +16,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIGestureReco
 
     var skills:[String:String] = [:]
     var ref:DatabaseReference!
+    var navigationBarAppearace = UINavigationBar.appearance()
     @IBOutlet var skillView: UIView!
     
     @IBOutlet weak var perencanaanOutlet: UIButton!
@@ -179,6 +180,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIGestureReco
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = false
+        // Navigation bar
+        navigationBarAppearace.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         ref = Database.database().reference()
         // Do any additional setup after loading the view.
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))

@@ -11,7 +11,7 @@ import FirebaseAuth
 import Firebase
 
 class InitialViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate {
-
+    var navigationBarAppearace = UINavigationBar.appearance()
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
@@ -67,7 +67,10 @@ class InitialViewController: UIViewController, UITextFieldDelegate, UIGestureRec
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.navigationBar.isHidden = true
+        // Navigation bar
+        navigationBarAppearace.barTintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
         // Do any additional setup after loading the view.
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
