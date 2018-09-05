@@ -246,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ItW-f9-cCY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="CGp-Pr-WRR">
-                    <rect key="frame" x="0.0" y="0.0" width="370" height="770"/>
+                    <rect key="frame" x="0.0" y="0.0" width="370" height="781"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SW5-jk-1Ff">
@@ -428,7 +428,7 @@
                     <viewLayoutGuide key="safeArea" id="0PE-0V-6zz"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="725.60000000000002" y="351.72413793103448"/>
+            <point key="canvasLocation" x="1500" y="354"/>
         </scene>
     </scenes>
     <resources>
