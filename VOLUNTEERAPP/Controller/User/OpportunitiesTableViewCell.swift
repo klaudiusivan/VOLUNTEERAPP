@@ -15,6 +15,8 @@ class OpportunitiesTableViewCell: UITableViewCell {
     @IBOutlet weak var tanggalEventOpportunitiesCell: UILabel!
     @IBOutlet weak var neededEventOpportunitiesCell: UILabel!
     @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var lokasiEventOpportunitiesCell: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

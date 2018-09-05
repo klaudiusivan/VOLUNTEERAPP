@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import Firebase
 
 class DetailPendingUserViewController: UIViewController {
-
+    var ref:DatabaseReference!
     
     @IBOutlet weak var gambarDetailUserPending: UIImageView!
     
@@ -26,6 +27,12 @@ class DetailPendingUserViewController: UIViewController {
     @IBOutlet weak var SARSkillLbl: UILabel!
     
     var navigationBarAppearace = UINavigationBar.appearance()
+    
+    @IBAction func approveBtn(_ sender: UIButton) {
+        ref.child("users").child("\(users[index].UID)").child("verified").setValue(1)
+        self.dismiss(animated: true) {
+        }
+    }
     
     var index : Int = 0
     
@@ -46,10 +53,7 @@ class DetailPendingUserViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Navigation bar
-        navigationBarAppearace.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        navigationBarAppearace.barTintColor = #colorLiteral(red: 0.4980392157, green: 0.768627451, blue: 0.2039215686, alpha: 1)
-        
+        ref = Database.database().reference()
         if users[index].skills["10"] == "1" {
             DapurSkill = "YES"
         } else {
