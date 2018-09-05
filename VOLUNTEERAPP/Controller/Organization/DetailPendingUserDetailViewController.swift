@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import Firebase
 
 class DetailPendingUserViewController: UIViewController {
-
+    var ref:DatabaseReference!
     
     @IBOutlet weak var gambarDetailUserPending: UIImageView!
     
@@ -25,6 +26,12 @@ class DetailPendingUserViewController: UIViewController {
     @IBOutlet weak var dapurSkillLbl: UILabel!
     @IBOutlet weak var SARSkillLbl: UILabel!
     
+    
+    @IBAction func approveBtn(_ sender: UIButton) {
+        ref.child("users").child("\(users[index].UID)").child("verified").setValue(1)
+        self.dismiss(animated: true) {
+        }
+    }
     
     var index : Int = 0
     
@@ -45,6 +52,7 @@ class DetailPendingUserViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
         if users[index].skills["10"] == "1" {
             DapurSkill = "YES"
         } else {

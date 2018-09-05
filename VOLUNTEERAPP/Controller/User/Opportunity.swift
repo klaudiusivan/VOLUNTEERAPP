@@ -16,8 +16,9 @@ class Opportunity {
     var sar:Int
     var medis:Int
     var dapur:Int
+    var UID:String
     
-    init(namaOpportunity:String, tanggalMulai:String, tanggalSelesai:String, tempat:String, sar:Int, medis:Int, dapur:Int) {
+    init(namaOpportunity:String, tanggalMulai:String, tanggalSelesai:String, tempat:String, sar:Int, medis:Int, dapur:Int, UID:String) {
         self.namaOpportunity = namaOpportunity
         self.tanggalMulai = tanggalMulai
         self.tanggalSelesai = tanggalSelesai
@@ -25,5 +26,6 @@ class Opportunity {
         self.sar = sar
         self.medis = medis
         self.dapur = dapur
+        self.UID = UID
     }
 }

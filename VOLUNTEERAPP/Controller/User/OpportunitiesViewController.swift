@@ -76,20 +76,40 @@ class OpportunitiesViewController: UIViewController,UITableViewDelegate,UITableV
     }
     
     func loadDataFromFirebase() {
-        self.ref.child("opportunities").observe(.childAdded) { (snapshot) in
-            let x = snapshot.value as! [String: Any]
-            
-            let a = Opportunity(
-                    namaOpportunity: x["namaOpportunity"] as! String,
-                    tanggalMulai: x["tanggalMulai"] as! String,
-                    tanggalSelesai: x["tanggalSelesai"] as! String,
-                    tempat: x["tempat"] as! String,
-                    sar: x["sar"] as! Int,
-                    medis: x["medis"] as! Int,
-                    dapur: x["dapur"] as! Int
-            )
-            self.opportunities.append(a)
-            self.opportunitiesTable.reloadData()
+//        self.ref.child("opportunities").observe(.childAdded) { (snapshot) in
+//            let x = snapshot.value as? [String: Any] ?? [:]
+//
+//            let a = Opportunity(
+//                    namaOpportunity: x["namaOpportunity"] as! String,
+//                    tanggalMulai: x["tanggalMulai"] as! String,
+//                    tanggalSelesai: x["tanggalSelesai"] as! String,
+//                    tempat: x["tempat"] as! String,
+//                    sar: x["sar"] as! Int,
+//                    medis: x["medis"] as! Int,
+//                    dapur: x["dapur"] as! Int,
+//                    UID: x["UID"] as! String
+//            )
+//            self.opportunities.append(a)
+//            self.opportunitiesTable.reloadData()
+//        }
+        self.ref.child("opportunities").observe(.value) { (snapshot) in
+            self.opportunities.removeAll()
+            let x = snapshot.value as? [String: Any] ?? [:]
+            for (_,value) in x {
+                let b = value as! [String:Any]
+                let a = Opportunity(
+                    namaOpportunity: b["namaOpportunity"] as! String, //String
+                    tanggalMulai: b["tanggalMulai"] as! String, //String
+                    tanggalSelesai: b["tanggalSelesai"] as! String, //String
+                    tempat: b["tempat"] as! String, //String
+                    sar: b["sar"] as! Int, //Int
+                    medis: b["medis"] as! Int, //Int
+                    dapur: b["dapur"] as! Int, //Int
+                    UID: b["UID"] as! String //String
+                )
+                self.opportunities.append(a)
+                self.opportunitiesTable.reloadData()
+            }
         }
     }
     

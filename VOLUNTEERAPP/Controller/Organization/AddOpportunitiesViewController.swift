@@ -84,10 +84,10 @@ class AddOpportunitiesViewController: UIViewController, UITextFieldDelegate, UIG
             "tempat" : tempat,
             "sar" : sarVolunteer,
             "medis" : medicVolunteer,
-            "dapur" : dapurUmumVolunteer
+            "dapur" : dapurUmumVolunteer,
+            "UID" : UUID().uuidString
         ] as [String:Any]
-        
-        ref.child("opportunities").childByAutoId().updateChildValues(eventData) {
+        ref.child("opportunities").child("\(eventData["UID"]!)").updateChildValues(eventData) {
             (error:Error?, ref:DatabaseReference) in
             if let error = error {
                 print("Data could not be saved: \(error.localizedDescription).")

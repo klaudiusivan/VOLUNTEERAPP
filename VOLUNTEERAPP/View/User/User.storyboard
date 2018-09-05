@@ -165,6 +165,9 @@
                                 <state key="normal" title="Join">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="joinBtn:" destination="zjX-Qr-PcJ" eventType="touchUpInside" id="sbF-Az-7sw"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Detail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCP-Ja-PvT">
                                 <rect key="frame" x="39" y="110" width="296" height="54"/>
@@ -248,6 +251,13 @@
                                     <constraint firstAttribute="height" constant="109" id="VJR-Pe-Ney"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected Role: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSO-wg-6hC">
+                                <rect key="frame" x="79" y="684" width="216" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -277,6 +287,7 @@
                     <connections>
                         <outlet property="detailCollection" destination="bYx-PX-ku7" id="oyX-B7-BvY"/>
                         <outlet property="gambarDetail" destination="P7P-BY-mzE" id="ziy-Rd-NVf"/>
+                        <outlet property="selectedRoleLbl" destination="rSO-wg-6hC" id="sJQ-SP-ZgA"/>
                         <outlet property="tanggalLbl" destination="50H-ko-R3v" id="9zh-rz-sdO"/>
                         <outlet property="titleEvent" destination="NCP-Ja-PvT" id="iNb-2O-df1"/>
                         <outlet property="totalVolLable" destination="oxg-1x-eyn" id="cQA-aO-88b"/>
