@@ -77,8 +77,8 @@ class PendingUserViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func loadDataFromFirebase() {
-        self.users.removeAll()
         self.ref.child("users").queryOrdered(byChild: "verified").queryEqual(toValue: 0).observe(.value) { (snapshot) in
+            self.users.removeAll()
             let x = snapshot.value as? [String: Any] ?? [:]
             for (_,value) in x {
                 let b = value as! [String:Any]
