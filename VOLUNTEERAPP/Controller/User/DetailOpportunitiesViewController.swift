@@ -111,9 +111,9 @@ class DetailOpportunitiesViewController: UIViewController,UICollectionViewDataSo
         ref = Database.database().reference()
         // detailCollection.layer.backgroundColor
         var totalVol = opportunities[index].dapur + opportunities[index].medis + opportunities[index].sar
-        gambarDetail.image = imageGambarDetail[index]
+        gambarDetail.image = imageGambarDetail[0]
         titleEvent.text = opportunities[index].namaOpportunity
-        tanggalLbl.text = "\(opportunities[index].tanggalMulai)-\(opportunities[index].tanggalSelesai)"
+        tanggalLbl.text = "\(opportunities[index].tanggalMulai) - \(opportunities[index].tanggalSelesai)"
         totalVolLable.text = "\(totalVol) Volunteer/s Needed"
         
         totalDetail = ["\(self.opportunities[index].dapur)","\(self.opportunities[index].medis)","\(self.opportunities[index].sar)"]

@@ -24,6 +24,7 @@ class OpportunitiesViewController: UIViewController,UITableViewDelegate,UITableV
         cell!.namaEventOpportunitiesCell.text = opportunities[indexPath.row].namaOpportunity
         cell!.tanggalEventOpportunitiesCell.text = "\(opportunities[indexPath.row].tanggalMulai) - \(opportunities[indexPath.row].tanggalSelesai)"
         cell!.neededEventOpportunitiesCell.text = "\(totalVol) Volunteer/s needed"
+        cell!.lokasiEventOpportunitiesCell.text = opportunities[indexPath.row].tempat
         return cell!
     }
     

@@ -77,9 +77,9 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lokasi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5f0-ab-tW3">
-                                                    <rect key="frame" x="29" y="55" width="48" height="18"/>
+                                                    <rect key="frame" x="29" y="55" width="117" height="18"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="48" id="uVZ-M0-Cpx"/>
+                                                        <constraint firstAttribute="width" constant="117" id="uVZ-M0-Cpx"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -116,6 +116,7 @@
                                         <connections>
                                             <outlet property="backView" destination="2hV-nq-8V2" id="VUX-4m-evi"/>
                                             <outlet property="gambarOpportunitiesCell" destination="0W9-Y6-nTy" id="leu-AD-Tu4"/>
+                                            <outlet property="lokasiEventOpportunitiesCell" destination="5f0-ab-tW3" id="fU5-3L-ziK"/>
                                             <outlet property="namaEventOpportunitiesCell" destination="oaK-Oi-ogw" id="g1o-Fz-pd0"/>
                                             <outlet property="neededEventOpportunitiesCell" destination="sgv-wq-JjK" id="ml6-q2-xO0"/>
                                             <outlet property="tanggalEventOpportunitiesCell" destination="WNb-84-Cie" id="q4e-RU-PzF"/>
