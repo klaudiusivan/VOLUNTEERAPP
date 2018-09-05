@@ -259,8 +259,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lokasi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JdP-q4-7Ja">
-                                <rect key="frame" x="165" y="298" width="44" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lokasi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JdP-q4-7Ja">
+                                <rect key="frame" x="104" y="298" width="167" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -295,6 +295,7 @@
                     <connections>
                         <outlet property="detailCollection" destination="bYx-PX-ku7" id="oyX-B7-BvY"/>
                         <outlet property="gambarDetail" destination="P7P-BY-mzE" id="ziy-Rd-NVf"/>
+                        <outlet property="lokasiLbl" destination="JdP-q4-7Ja" id="2wC-xW-ZfY"/>
                         <outlet property="selectedRoleLbl" destination="rSO-wg-6hC" id="sJQ-SP-ZgA"/>
                         <outlet property="tanggalLbl" destination="50H-ko-R3v" id="9zh-rz-sdO"/>
                         <outlet property="titleEvent" destination="NCP-Ja-PvT" id="iNb-2O-df1"/>

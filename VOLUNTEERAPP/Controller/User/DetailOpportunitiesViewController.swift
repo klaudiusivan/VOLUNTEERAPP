@@ -90,6 +90,7 @@ class DetailOpportunitiesViewController: UIViewController,UICollectionViewDataSo
     @IBOutlet weak var titleEvent: UILabel!
     @IBOutlet weak var totalVolLable: UILabel!
     @IBOutlet weak var gambarDetail: UIImageView!
+    @IBOutlet weak var lokasiLbl: UILabel!
     
     
     var ahliDetail : [String] = ["Dapur =","Medis =","Sar ="]
@@ -115,7 +116,7 @@ class DetailOpportunitiesViewController: UIViewController,UICollectionViewDataSo
         titleEvent.text = opportunities[index].namaOpportunity
         tanggalLbl.text = "\(opportunities[index].tanggalMulai) - \(opportunities[index].tanggalSelesai)"
         totalVolLable.text = "\(totalVol) Volunteer/s Needed"
-        
+        lokasiLbl.text = opportunities[index].tempat
         totalDetail = ["\(self.opportunities[index].dapur)","\(self.opportunities[index].medis)","\(self.opportunities[index].sar)"]
    
         // Do any additional setup after loading the view.
