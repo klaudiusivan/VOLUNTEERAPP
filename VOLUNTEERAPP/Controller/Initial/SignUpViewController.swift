@@ -12,7 +12,7 @@ import Firebase
 
 
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate {
 
     var skills:[String:String] = [:]
     var ref:DatabaseReference!
@@ -181,8 +181,22 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         ref = Database.database().reference()
         // Do any additional setup after loading the view.
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
+        self.emailField.delegate = self
+        self.nameField.delegate = self
+        self.passwordField.delegate = self
+        
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self as! UIGestureRecognizerDelegate
     }
 
+    //return to remove keyboard
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
